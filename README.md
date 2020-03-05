@@ -16,3 +16,9 @@ The spaces between commas and subsequent titles are optional.
 Only one title is returned per input, but titles do not have to be exact:  
 ```rt return of the king```  
 Returns the score of "The Lord of the Rings: Return of the King"  
+   
+However, this also allows room for some ambiguity.  
+```rt the lion king```  
+Returns the score of the 1994 version of "The Lion King"  
+In this case, you should specify a year.
+
