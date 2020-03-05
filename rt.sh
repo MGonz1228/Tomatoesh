@@ -20,8 +20,8 @@ grabRotten()
 	fi
 
 	#grab URL, extract Title and Year
-	finalURL=$(curl -s $urlToGrab)
-	titleAndYear=$(echo $finalURL | grep -E -o '"Title":".*"Year":"[0-9]{4}"')
+	outputData=$(curl -s $urlToGrab)
+	titleAndYear=$(echo $outputData | grep -E -o '"Title":".*"Year":"[0-9]{4}"')
 	title=$(echo $titleAndYear | grep -E -o '"Title":"[^"]+"' | grep -E -o ':"[^"]+"' | grep -E -o '[^:"]+')
 	year=$(echo $titleAndYear | grep -E -o '"Year".*' | grep -E -o '[0-9]{4}')
 
@@ -34,7 +34,7 @@ grabRotten()
 		echo -e "Year:\t"$year
 
 		#grab Rotten Tomatoes score
-		criticScore=$(echo $finalURL | grep -E -o 'Rotten Tomatoes","Value":"[0-9]{0,3}%' | grep -E -o '[0-9]{0,3}%')
+		criticScore=$(echo $outputData | grep -E -o 'Rotten Tomatoes","Value":"[0-9]{0,3}%' | grep -E -o '[0-9]{0,3}%')
 
 		#check if critic score found, if so apply Rotten/Fresh color and print
 		if [ -z "$criticScore" ]
