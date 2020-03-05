@@ -8,7 +8,9 @@ Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input 
 ```rt TITLE YEAR(optional)```
 
 ### Multiple movies:
-```rt -m TITLE YEAR(optional), TITLE YEAR(optional), ...```  
+```rt -m TITLE YEAR(optional), TITLE YEAR(optional), ...``` 
+*Currently only supports movies.*  
+
   
 The spaces between commas and subsequent titles are optional.
 
@@ -22,4 +24,3 @@ Returns the score of "The Lord of the Rings: Return of the King"
 Returns the score of "The Lion King (1994)" instead of the 2019 version.  
 In these cases, you should specify a year.
 
-Currently only supports movies.
