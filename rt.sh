@@ -1,21 +1,22 @@
 #Author: Matthew Gonzalez
 #returns Rotten Tomatoes score of input movie with optional year
 
-
 grabRotten()
 {
+	#grabRotten takes parameters: movie, year
 	movie=$1
 	commandLineYear=$2
+	
 	#convert "input movie title" to "input_movie_title" for future URL
 	movieurl=${movie//' '/_} 
 
 	#check if year entered, then create URL accordingly
 	if [ -z "$commandLineYear" ]
 	then
-		urlToGrab="http://www.omdbapi.com/?t=$movieurl&apikey=f11650f1"
+		urlToGrab="http://www.omdbapi.com/?t=$movieurl&apikey=YOUR_OMDB_API_KEY_HERE"
 	else
 		movieurl=${movieurl::-5}
-		urlToGrab="http://www.omdbapi.com/?t=$movieurl&y=$commandLineYear&apikey=f11650f1"	
+		urlToGrab="http://www.omdbapi.com/?t=$movieurl&y=$commandLineYear&apikey=YOUR_OMDB_API_KEY_HERE"	
 	fi
 
 	#grab URL, extract Title and Year
@@ -28,10 +29,7 @@ grabRotten()
 	if [ -z "$title" ]
 	then
 		echo "Movie not found!"
-#		exit 1
 	else
-		#echo "Movie found!"
-
 		echo -e "Title:\t"$title
 		echo -e "Year:\t"$year
 
@@ -56,23 +54,22 @@ grabRotten()
 	fi
 }
 
-#grab movie and year from command line arguments
+#parse command line arguments
 if [ $1 == "-m" ]
 then
-#	echo "-m picked up."
+#	handle comma separated input
 	movies=${@:2}
 	IFS=',' read -ra movieArray <<< "$movies"
 	for movie in "${movieArray[@]}"
 	do
+		#remove leading spaces in the event that movies are entered as "movie1, movie2"
 		if [ "${movie:0:1}" == " " ]
 		then
 			movie="${movie:1}"
 		fi
-	
 		movieYear=$(echo $movie | grep -oE '[0-9]{4}$')
 		grabRotten "$movie" "$movieYear"
 		echo -e "\e[39m"
-#		echo $movie $movieYear
 	done
 else	
 	movie=$@
