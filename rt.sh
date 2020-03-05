@@ -49,8 +49,6 @@ grabRotten()
 				echo -e "Score:\t\e[91m$criticScore"
 			fi
 		fi
-
-
 	fi
 }
 
@@ -75,7 +73,6 @@ else
 	movie=$@
 	commandLineYear=${!#}
 	commandLineYear=$(echo $commandLineYear | grep -E -o '[0-9]{4}')
-	grabRotten "$movie" "$commandLineYear"
-	
+	grabRotten "$movie" "$commandLineYear"	
 fi
 
