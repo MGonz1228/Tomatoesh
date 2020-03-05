@@ -15,7 +15,7 @@ The spaces between commas and subsequent titles are optional.
 # Note:
 ### Titles do not have to be exact:  
 ```rt return of the king```  
-Returns the score of "The Lord of the Rings: Return of the King"  
+Returns the score of "The Lord of the Rings: The Return of the King"  
   
 ### Handling ambiguity:
 ```rt the lion king```  
