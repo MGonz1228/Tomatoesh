@@ -20,6 +20,6 @@ Returns the score of "The Lord of the Rings: Return of the King"
 However, this also creates room for some ambiguity.  
   
 ```rt the lion king```  
-Returns the score of "The Lion King (1994)" instead of the 2019 version.
+Returns the score of "The Lion King (1994)" instead of the 2019 version.  
 In these cases, you should specify a year.
 
