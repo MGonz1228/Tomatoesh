@@ -1,5 +1,5 @@
 # tomatoes
-Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input.
+Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input movie(s).
 
 ![](usage.gif)
 
