@@ -5,18 +5,18 @@ grabRotten()
 {
 	#grabRotten takes parameters: movie, year
 	movie=$1
-	commandLineYear=$2
+	movieYear=$2
 	
 	#convert "input movie title" to "input_movie_title" for future URL
 	movieurl=${movie//' '/_} 
 
 	#check if year entered, then create URL accordingly
-	if [ -z "$commandLineYear" ]
+	if [ -z "$movieYear" ]
 	then
 		urlToGrab="http://www.omdbapi.com/?t=$movieurl&apikey=YOUR_OMDB_API_KEY_HERE"
 	else
 		movieurl=${movieurl::-5}
-		urlToGrab="http://www.omdbapi.com/?t=$movieurl&y=$commandLineYear&apikey=YOUR_OMDB_API_KEY_HERE"	
+		urlToGrab="http://www.omdbapi.com/?t=$movieurl&y=$movieYear&apikey=YOUR_OMDB_API_KEY_HERE"	
 	fi
 
 	#grab URL, extract Title and Year
