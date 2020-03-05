@@ -5,7 +5,7 @@ Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input.
 
 # Syntax:
 ### One movie:
-rt TITLE YEAR(optional)
+```rt TITLE YEAR(optional)```
 
 ### Multiple movies:
 ```rt -m TITLE YEAR(optional), TITLE YEAR(optional), ...```  
