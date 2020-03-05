@@ -23,3 +23,4 @@ However, this also creates room for some ambiguity.
 Returns the score of "The Lion King (1994)" instead of the 2019 version.  
 In these cases, you should specify a year.
 
+Currently only supports movies.
