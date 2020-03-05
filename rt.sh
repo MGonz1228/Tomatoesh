@@ -36,7 +36,7 @@ grabRotten()
 		#grab Rotten Tomatoes score
 		criticScore=$(echo $finalURL | grep -E -o 'Rotten Tomatoes","Value":"[0-9]{0,3}%' | grep -E -o '[0-9]{0,3}%')
 
-		#check if critic score found, if so change color and print accordingly
+		#check if critic score found, if so apply Rotten/Fresh color and print
 		if [ -z "$criticScore" ]
 		then
 			echo "No Critic Score found"
