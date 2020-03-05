@@ -17,7 +17,8 @@ Titles do not have to be exact:
 ```rt return of the king```  
 Returns the score of "The Lord of the Rings: Return of the King"  
    
-However, this also allows room for some ambiguity.  
+However, this also creates room for some ambiguity.  
+  
 ```rt the lion king```  
 Returns the score of the 1994 version of "The Lion King"  
 In these cases, you should specify a year.
