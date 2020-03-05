@@ -55,7 +55,7 @@ grabRotten()
 #parse command line arguments
 if [ $1 == "-m" ]
 then
-#	handle comma separated input
+	#handle comma separated input
 	movies=${@:2}
 	IFS=',' read -ra movieArray <<< "$movies"
 	for movie in "${movieArray[@]}"
