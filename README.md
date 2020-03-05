@@ -9,10 +9,10 @@ Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input 
 
 ### Multiple movies:
 ```rt -m TITLE YEAR(optional), TITLE YEAR(optional), ...``` 
-*Currently only supports movies.*  
-
   
 The spaces between commas and subsequent titles are optional.
+*Currently only supports movies.*  
+
 
 # Note:
 ### Titles do not have to be exact:  
