@@ -28,7 +28,7 @@ grabRotten()
 	#check if movie was found
 	if [ -z "$title" ]
 	then
-		echo "Movie not found!"
+		echo "$movie not found!"
 	else
 		echo -e "Title:\t"$title
 		echo -e "Year:\t"$year
