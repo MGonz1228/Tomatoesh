@@ -5,7 +5,11 @@ Bash script that uses OMDb API to get the Rotten Tomatoes critic score of input 
 
 ![](usage.gif)
 
-# Syntax:
+# Usage:
+## OBDb API Key
+* Get your OBDb API key [here](http://www.omdbapi.com/apikey.aspx).
+* Replace ```YOUR_OMDB_API_KEY_HERE``` on line 16 with your API key.
+## Syntax:
 ### One movie:
 ```./rt.sh TITLE YEAR(optional)```
 
