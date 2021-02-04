@@ -25,7 +25,8 @@ Returns the score of "The Lord of the Rings: The Return of the King"
   
 ### Handling ambiguity:
 ```./rt.sh the lion king```  
-Returns the score of "The Lion King (1994)" instead of the 2019 version.  
+Returns the score of "The Lion King (1994)" instead of the 2019 version. 
+
 In these cases, you should specify a year.
 
 ```./rt.sh the lion king 2019```
